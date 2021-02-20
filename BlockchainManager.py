@@ -25,7 +25,7 @@ class BlockchainManager:
         # append these to self.addresses
         json_address = jsonpickle.encode(self.address)
         for address in self.addresses:
-            json = {"address_to_add": json_address}
+            json = {"address_to_add": self.address}
             r = requests.post(url="http://" + address + ":5000/add_address", json=json)
 
     def get_blockchain(self, target_address):
