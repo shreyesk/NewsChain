@@ -53,7 +53,7 @@ app = Flask(__name__)
 
 @app.route('/connected_addresses', methods=['GET'])
 def connected_addresses():
-    return jsonpickle.encode(blockchain_manager.addresses)
+    return jsonpickle.encode(blockchain_manager)
 
 
 @app.route('/add_address', methods=['POST'])
