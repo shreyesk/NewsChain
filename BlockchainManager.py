@@ -7,7 +7,7 @@ class BlockchainManager:
     def __init__(self, address, known_address):
         self.address = address
         self.addresses = []
-        if known_address != 0:
+        if known_address != "0":
             self.addresses.append(known_address)
             self.get_addresses(known_address)
         blockchains = []
