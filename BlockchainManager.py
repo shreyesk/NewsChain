@@ -43,10 +43,11 @@ class BlockchainManager:
 from flask import Flask, request, render_template
 from Crypto.PublicKey import RSA
 
-app = Flask(__name__)
+
 address = input("Enter address")
 known_address = input("Enter known address")
 blockchain_manager = BlockchainManager(address, known_address)
+app = Flask(__name__)
 
 
 @app.route('/connected_addresses', methods=['GET'])
