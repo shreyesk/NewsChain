@@ -44,6 +44,7 @@ from flask import Flask, request, render_template
 from Crypto.PublicKey import RSA
 
 app = Flask(__name__)
+known_address = int(input("Enter known address"))
 blockchain_manager = BlockchainManager()
 
 
