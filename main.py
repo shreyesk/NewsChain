@@ -40,8 +40,8 @@ def mine():
 def get_key():
     keyPair = RSA.generate(bits=1024)
     toRet = ""
-    toRet += f"Public key:  (n={hex(keyPair.n)}, e={hex(keyPair.e)})"
-    toRet += f"Private key: (n={hex(keyPair.n)}, d={hex(keyPair.d)})"
+    toRet += "Public key:  (n={}, e={})".format(hex(keyPair.n), hex(keyPair.e))
+    toRet += "Private key: (n={}, d={})".format(hex(keyPair.n), hex(keyPair.d))
     return toRet
 
 
