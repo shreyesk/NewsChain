@@ -18,7 +18,8 @@ class BlockchainManager:
 
     def get_addresses(self, known_address):
         r = requests.get(url="http://" + known_address + ":5000/connected_addresses")
-        addresses = jsonpickle.decode(r)
+        addresses = r
+        print(r)
         self.addresses.append(addresses)
         # send req to known_address for adresses
         # append these to self.addresses
